@@ -1,0 +1,6 @@
+order_id,customer_id,order_date,product,category,quantity,unit_price,country
+2001,C006,2026-02-02,Chair,Furniture,3,85.00,India
+2002,C007,2026-02-04,Desk,Furniture,1,150.00,India
+2003,C008,2026-02-05,Headphones,Electronics,2,70.00,United Kingdom
+2004,,2026-02-08,Tablet,Electronics,1,220.00,India
+2005,C010,2026-02-10,Backpack,Bags,2,35.00,India

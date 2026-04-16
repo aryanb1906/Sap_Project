@@ -1,0 +1,2 @@
+[console_scripts]
+batch-ingest = batch_ingestion_pipeline.cli:main

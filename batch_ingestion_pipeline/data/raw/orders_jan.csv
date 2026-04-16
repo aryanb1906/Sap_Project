@@ -1,0 +1,6 @@
+order_id,customer_id,order_date,product,category,quantity,unit_price,country
+1001,C001,2026-01-05,Keyboard,Electronics,2,45.50,India
+1002,C002,2026-01-07,Mouse,Electronics,1,25.00,India
+1003,C003,2026-01-08,Laptop,Electronics,1,650.00,United States
+1004,C004,2026-01-10,Notebook,Stationery,4,3.25,India
+1005,C005,2026-01-12,Pen,,0,1.50,India
