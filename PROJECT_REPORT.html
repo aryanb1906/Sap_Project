@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SAP Project - Batch Ingestion Dashboard Report</title>
+  <style>
+    @page {
+      size: A4;
+      margin: 18mm 16mm 18mm 16mm;
+    }
+
+    @media print {
+      body {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+      .page-break {
+        break-before: page;
+      }
+    }
+
+    :root {
+      --ink: #111827;
+      --muted: #4b5563;
+      --accent: #1d4ed8;
+      --accent-2: #0f766e;
+      --bg: #f8fafc;
+      --card: #ffffff;
+      --line: #dbe4f0;
+    }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: #fff;
+      color: var(--ink);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 12px;
+      line-height: 1.45;
+      text-align: justify;
+    }
+
+    body {
+      padding: 0;
+    }
+
+    .page {
+      min-height: 260mm;
+      position: relative;
+      padding-bottom: 18px;
+    }
+
+    .page::after {
+      content: "Page " counter(page);
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      font-size: 11px;
+      color: var(--muted);
+    }
+
+    .cover {
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      overflow: hidden;
+      margin-bottom: 18px;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, #0f172a, #1d4ed8 60%, #0f766e);
+      color: white;
+      padding: 24px;
+    }
+
+    .hero h1 {
+      margin: 0 0 8px 0;
+      font-size: 28px;
+      line-height: 1.15;
+    }
+
+    .hero h2 {
+      margin: 0;
+      font-size: 15px;
+      font-weight: 400;
+      opacity: 0.95;
+    }
+
+    .meta {
+      padding: 18px 24px 20px 24px;
+      background: #fff;
+    }
+
+    .meta-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px 24px;
+      margin-top: 12px;
+    }
+
+    .meta-item {
+      background: var(--bg);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 10px 12px;
+    }
+
+    .label {
+      font-size: 11px;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      margin-bottom: 4px;
+    }
+
+    h3 {
+      font-size: 15px;
+      margin: 18px 0 10px;
+      color: var(--ink);
+    }
+
+    h4 {
+      font-size: 14px;
+      margin: 14px 0 8px;
+      color: var(--ink);
+    }
+
+    p {
+      margin: 0 0 10px 0;
+    }
+
+    ul {
+      margin: 6px 0 10px 20px;
+      padding: 0;
+    }
+
+    li {
+      margin: 4px 0;
+    }
+
+    .card {
+      border: 1px solid var(--line);
+      background: var(--card);
+      border-radius: 14px;
+      padding: 14px 16px;
+      margin: 10px 0 14px;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 12px;
+    }
+
+    .tag {
+      display: inline-block;
+      background: #e0ecff;
+      color: #1e40af;
+      border-radius: 999px;
+      padding: 4px 10px;
+      font-size: 11px;
+      margin: 0 6px 6px 0;
+      font-weight: 700;
+    }
+
+    .figure {
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      overflow: hidden;
+      background: #fff;
+      margin: 10px 0 16px;
+      padding: 10px;
+    }
+
+    .figure img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .figure figcaption {
+      font-size: 11px;
+      color: var(--muted);
+      margin-top: 6px;
+    }
+
+    .footer-note {
+      margin-top: 8px;
+      font-size: 11px;
+      color: var(--muted);
+    }
+
+    .small {
+      font-size: 11px;
+      color: var(--muted);
+    }
+
+    .section-title {
+      padding-bottom: 4px;
+      border-bottom: 1px solid var(--line);
+      margin-bottom: 12px;
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <div class="cover">
+      <div class="hero">
+        <h1>Project Documentation</h1>
+        <h2>SAP Project - Batch Ingestion Dashboard</h2>
+      </div>
+      <div class="meta">
+        <div><strong>Name:</strong> Aryan Bhargava</div>
+        <div><strong>Roll No:</strong> 23051491</div>
+        <div class="meta-grid">
+          <div class="meta-item">
+            <div class="label">Project Type</div>
+            <div>Data Engineering / Batch Ingestion / Dashboard</div>
+          </div>
+          <div class="meta-item">
+            <div class="label">Tech Stack</div>
+            <div>Python, Pandas, SQLite, Streamlit, Plotly</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <h3 class="section-title">1. Title</h3>
+    <div class="card">
+      <p><strong>SAP Project - Batch Ingestion Dashboard</strong> is a portfolio-ready data engineering system that ingests CSV files, validates and cleans them, loads curated records into SQLite, and presents operational and analytical insights through a Streamlit dashboard.</p>
+    </div>
+
+    <h3 class="section-title">2. Problem Statement</h3>
+    <div class="card">
+      <p>Small businesses and student demo datasets often start as scattered CSV files with inconsistent formatting, missing values, and no audit trail. This makes it difficult to trust the data, summarize it, or present it in a useful way. The challenge was to build a compact but realistic batch pipeline that can process such raw files, reject invalid rows, store clean data safely, and display the final output in a professional dashboard.</p>
+    </div>
+
+    <h3 class="section-title">3. Solution / Features</h3>
+    <div class="grid-2">
+      <div class="card">
+        <h4>Pipeline Features</h4>
+        <ul>
+          <li>Reads multiple CSV files from a raw landing folder.</li>
+          <li>Normalizes column names and validates required fields.</li>
+          <li>Cleans text, numeric, and date fields before loading.</li>
+          <li>Calculates analytical fields like total amount and order month.</li>
+          <li>Writes batch audit records for each file processed.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h4>Dashboard Features</h4>
+        <ul>
+          <li>Executive KPI cards for orders, revenue, and success rate.</li>
+          <li>Filters for category, country, batch, and month.</li>
+          <li>Revenue charts by category and month.</li>
+          <li>Batch audit history and load timeline.</li>
+          <li>Data quality snapshot for quick review.</li>
+        </ul>
+      </div>
+    </div>
+
+    <h3 class="section-title">4. Screenshots / Visuals</h3>
+    <div class="figure">
+      <img src="assets/banner.svg" alt="Project banner" />
+      <figcaption>Figure 1. Project banner used in the repository landing page.</figcaption>
+    </div>
+    <div class="figure">
+      <img src="assets/dashboard-preview.svg" alt="Dashboard preview" />
+      <figcaption>Figure 2. Dashboard preview showing KPI cards, revenue trend, and audit panel.</figcaption>
+    </div>
+
+    <div class="page-break"></div>
+
+    <h3 class="section-title">5. Tech Stack</h3>
+    <div class="card">
+      <span class="tag">Python 3.12</span>
+      <span class="tag">Pandas</span>
+      <span class="tag">SQLite</span>
+      <span class="tag">Streamlit</span>
+      <span class="tag">Plotly</span>
+      <span class="tag">PowerShell</span>
+      <p class="footer-note">Python and Pandas are used for ingestion and transformation. SQLite serves as the local warehouse. Streamlit and Plotly power the frontend analytics experience. PowerShell provides a convenient Windows demo runner.</p>
+    </div>
+
+    <h3 class="section-title">6. Unique Points</h3>
+    <div class="grid-3">
+      <div class="card">
+        <h4>Clean Presentation</h4>
+        <p>The project has a root-level launcher, badges, architecture doc, and visual assets that make the repository look polished and complete.</p>
+      </div>
+      <div class="card">
+        <h4>Auditability</h4>
+        <p>Every file load is recorded, which makes it easy to explain what happened during each batch run.</p>
+      </div>
+      <div class="card">
+        <h4>Realistic Analytics</h4>
+        <p>The dashboard does not just display data; it shows trends, quality checks, and filtered views that resemble a real business tool.</p>
+      </div>
+    </div>
+
+    <h3 class="section-title">7. Future Improvements</h3>
+    <div class="card">
+      <ul>
+        <li>Replace SQLite with PostgreSQL for multi-user warehouse support.</li>
+        <li>Add scheduled execution with Airflow or Windows Task Scheduler.</li>
+        <li>Include downloadable CSV and PDF reports from the dashboard.</li>
+        <li>Store rejected rows in a separate error table for deeper debugging.</li>
+        <li>Publish the dashboard online for direct portfolio access.</li>
+      </ul>
+    </div>
+
+    <h3 class="section-title">8. Conclusion</h3>
+    <div class="card">
+      <p>This project demonstrates a complete mini data engineering workflow: ingestion, validation, transformation, storage, audit logging, and presentation. It is intentionally lightweight so it can run on a student laptop, but it still shows the structure and discipline of a real production-style analytics solution.</p>
+    </div>
+
+    <p class="small">Prepared for academic submission and portfolio presentation.</p>
+  </div>
+</body>
+</html>

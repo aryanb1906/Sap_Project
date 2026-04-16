@@ -12,7 +12,7 @@ A polished data engineering project that ingests CSV files, validates and transf
 
 ![Project Banner](assets/banner.svg)
 
-[Architecture](ARCHITECTURE.md) | [Demo Guide](batch_ingestion_pipeline/DEMO.md) | [Project README](batch_ingestion_pipeline/README.md)
+[Architecture](ARCHITECTURE.md) | [Project Report](PROJECT_REPORT.html) | [Markdown Report](PROJECT_REPORT.md) | [Demo Guide](batch_ingestion_pipeline/DEMO.md) | [Project README](batch_ingestion_pipeline/README.md)
 
 ## At a Glance
 
@@ -122,3 +122,10 @@ The screenshot-style preview above shows the main UI layout: KPI cards, revenue 
 ## Why This Project Stands Out
 
 This project combines ETL logic, data quality handling, persistence, and analytics into one portfolio-ready solution. It is simple enough to run locally, but complete enough to demonstrate real data engineering thinking.
+
+## Project Report
+
+The full submission-style report is available in:
+
+- [PROJECT_REPORT.html](PROJECT_REPORT.html) for print-friendly PDF export
+- [PROJECT_REPORT.md](PROJECT_REPORT.md) for quick editing and review
