@@ -4,5 +4,6 @@ __pycache__/
 *.pyc
 *.db
 *.sqlite3
+*.egg-info/
 batch_ingestion_pipeline/data/warehouse/
 batch_ingestion_pipeline/data/logs/

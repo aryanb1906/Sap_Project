@@ -5,7 +5,9 @@
 
 A polished data engineering project that ingests CSV files, validates and transforms records, loads curated data into SQLite, and presents the results in a Streamlit dashboard.
 
-## What This Project Demonstrates
+[Architecture](ARCHITECTURE.md) | [Demo Guide](batch_ingestion_pipeline/DEMO.md) | [Project README](batch_ingestion_pipeline/README.md)
+
+## At a Glance
 
 - Batch CSV ingestion from a landing folder
 - Data validation and cleaning
@@ -15,32 +17,57 @@ A polished data engineering project that ingests CSV files, validates and transf
 - Interactive Streamlit frontend
 - Windows-friendly demo launcher
 
-## Repository Structure
+## Repository Layout
 
 ```text
 Sap_Project/
-├── app.py
-├── ARCHITECTURE.md
-└── batch_ingestion_pipeline/
-    ├── app.py
-    ├── DEMO.md
-    ├── README.md
-    ├── run_demo.ps1
-    ├── pyproject.toml
-    ├── data/
-    ├── src/
-    └── tests/
+├── app.py                      # Root launcher for the dashboard
+├── ARCHITECTURE.md            # System design and flow
+└── batch_ingestion_pipeline/  # Full project implementation
+    ├── app.py                 # Main Streamlit dashboard
+    ├── DEMO.md                # Demo walkthrough
+    ├── README.md              # Project-specific instructions
+    ├── run_demo.ps1           # One-command demo runner
+    ├── pyproject.toml         # Dependencies and packaging
+    ├── data/                  # Sample inputs, logs, warehouse
+    ├── src/                   # Ingestion package code
+    └── tests/                 # Unit and integration tests
 ```
 
-## How It Works
+## What It Does
 
 1. Raw CSV files are placed in `batch_ingestion_pipeline/data/raw/`.
-2. The pipeline validates required columns and cleans bad values.
+2. The pipeline validates required columns and cleans invalid values.
 3. Valid rows are loaded into `orders_fact` in SQLite.
 4. Each file load is recorded in `batch_runs`.
 5. The dashboard reads the warehouse and visualizes the results.
 
-## Run the Project
+## Features
+
+### Data Pipeline
+
+- Normalizes column names
+- Rejects invalid rows with missing or malformed values
+- Calculates `total_amount`, `order_year`, and `order_month`
+- Writes a batch audit trail for each processed CSV file
+
+### Dashboard
+
+- KPI cards for total orders, revenue, average order value, and loaded rows
+- Filters for category, country, month, and batch name
+- Revenue charts by category and month
+- Batch audit history
+- Loaded orders table
+- Data quality snapshot
+- Country mix and load success indicators
+
+### Demo Experience
+
+- One-command batch run with `run_demo.ps1`
+- Root-level dashboard launcher through `app.py`
+- Ready-to-present sample data and output
+
+## Quick Start
 
 ### 1. Install Dependencies
 
@@ -65,16 +92,6 @@ From the repository root:
 streamlit run app.py
 ```
 
-## Dashboard Features
-
-- KPI cards for total orders, revenue, average order value, and loaded rows
-- Filters for category, country, month, and batch name
-- Revenue visualizations by category and month
-- Batch audit history
-- Loaded orders table
-- Data quality snapshot
-- Country mix and load success indicators
-
 ## Expected Output
 
 After running the demo, the dashboard shows data similar to:
@@ -89,10 +106,6 @@ After running the demo, the dashboard shows data similar to:
 - `orders_fact` stores the cleaned order-level facts
 - `batch_runs` stores the audit trail for each ingestion run
 
-## Architecture
-
-See [ARCHITECTURE.md](ARCHITECTURE.md) for the full system flow.
-
-## Why This Project Is Strong
+## Why This Project Stands Out
 
 This project combines ETL logic, data quality handling, persistence, and analytics into one portfolio-ready solution. It is simple enough to run locally, but complete enough to demonstrate real data engineering thinking.
