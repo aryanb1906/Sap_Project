@@ -5,6 +5,13 @@
 
 A polished data engineering project that ingests CSV files, validates and transforms records, loads curated data into SQLite, and presents the results in a Streamlit dashboard.
 
+[![Python](https://img.shields.io/badge/Python-3.12-3776AB?logo=python&logoColor=white)](https://www.python.org/)
+[![Streamlit](https://img.shields.io/badge/Streamlit-Dashboard-FF4B4B?logo=streamlit&logoColor=white)](https://streamlit.io/)
+[![SQLite](https://img.shields.io/badge/SQLite-Warehouse-003B57?logo=sqlite&logoColor=white)](https://www.sqlite.org/)
+[![License](https://img.shields.io/badge/Portfolio-Project-111827)](#)
+
+![Project Banner](assets/banner.svg)
+
 [Architecture](ARCHITECTURE.md) | [Demo Guide](batch_ingestion_pipeline/DEMO.md) | [Project README](batch_ingestion_pipeline/README.md)
 
 ## At a Glance
@@ -100,6 +107,12 @@ After running the demo, the dashboard shows data similar to:
 - Total rows loaded: 8
 - Total revenue: 1394.00
 - Top category: Electronics
+
+## Visual Preview
+
+![Dashboard Preview](assets/dashboard-preview.svg)
+
+The screenshot-style preview above shows the main UI layout: KPI cards, revenue trend, audit tracking, and quality summary.
 
 ## Data Model
 

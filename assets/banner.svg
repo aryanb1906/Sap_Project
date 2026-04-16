@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="300" viewBox="0 0 1200 300" role="img" aria-label="Batch Ingestion Dashboard banner">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="55%" stop-color="#1d4ed8"/>
+      <stop offset="100%" stop-color="#0f766e"/>
+    </linearGradient>
+    <linearGradient id="panel" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.16"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.08"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="300" rx="32" fill="url(#bg)"/>
+  <circle cx="1080" cy="62" r="120" fill="#ffffff" opacity="0.08"/>
+  <circle cx="1040" cy="220" r="150" fill="#22c55e" opacity="0.08"/>
+  <rect x="60" y="54" width="520" height="192" rx="24" fill="url(#panel)" stroke="#ffffff" stroke-opacity="0.18"/>
+  <text x="96" y="118" fill="#ffffff" font-size="42" font-family="Segoe UI, Arial, sans-serif" font-weight="700">Batch Ingestion Dashboard</text>
+  <text x="96" y="162" fill="#dbeafe" font-size="21" font-family="Segoe UI, Arial, sans-serif">CSV ingestion, data quality, audit logs, warehouse analytics</text>
+  <g transform="translate(650 58)">
+    <rect width="470" height="184" rx="24" fill="#0b1220" fill-opacity="0.52" stroke="#ffffff" stroke-opacity="0.12"/>
+    <rect x="24" y="24" width="118" height="44" rx="14" fill="#2563eb"/>
+    <text x="54" y="52" fill="#ffffff" font-size="18" font-family="Segoe UI, Arial, sans-serif" font-weight="600">CSV Input</text>
+    <rect x="170" y="24" width="118" height="44" rx="14" fill="#0f766e"/>
+    <text x="183" y="52" fill="#ffffff" font-size="18" font-family="Segoe UI, Arial, sans-serif" font-weight="600">Validation</text>
+    <rect x="316" y="24" width="130" height="44" rx="14" fill="#f59e0b"/>
+    <text x="336" y="52" fill="#ffffff" font-size="18" font-family="Segoe UI, Arial, sans-serif" font-weight="600">SQLite + UI</text>
+    <path d="M74 110 H150" stroke="#cbd5e1" stroke-width="5" stroke-linecap="round"/>
+    <path d="M220 110 H296" stroke="#cbd5e1" stroke-width="5" stroke-linecap="round"/>
+    <path d="M366 110 H420" stroke="#cbd5e1" stroke-width="5" stroke-linecap="round"/>
+    <circle cx="58" cy="110" r="18" fill="#60a5fa"/>
+    <circle cx="174" cy="110" r="18" fill="#34d399"/>
+    <circle cx="320" cy="110" r="18" fill="#fbbf24"/>
+    <circle cx="442" cy="110" r="18" fill="#a78bfa"/>
+  </g>
+</svg>
